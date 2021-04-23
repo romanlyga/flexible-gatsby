@@ -1,0 +1,38 @@
+stackbitVersion: ~0.3.0
+ssgName: gatsby
+nodeVersion: '12'
+publishDir: public
+pagesDir: content/blog
+models:
+  blog:
+    type: page
+    label: Blog
+    match: '**/*'
+    exclude:
+      - welcome-to-gatsby/index.md
+    fields:
+      - name: title
+        type: string
+      - name: date
+        type: date
+      - name: img
+        type: image
+      - name: tags
+        type: list
+        items:
+          type: string
+  welcome_to_gatsby:
+    type: page
+    label: Welcome To Gatsby
+    folder: welcome-to-gatsby
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: datetime
+        name: date
+        label: Date
+      - type: string
+        name: description
+        label: Description
