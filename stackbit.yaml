@@ -22,7 +22,8 @@ models:
         items:
           type: string
         label: Tags
-    folder: ''
+    singleInstance: true
+    file: ''
   welcome_to_gatsby:
     type: page
     label: Welcome To Gatsby
