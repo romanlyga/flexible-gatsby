@@ -7,10 +7,6 @@ models:
   blog:
     type: page
     label: Blog
-    match:
-      - '**/*'
-    exclude:
-      - welcome-to-gatsby/index.md
     fields:
       - name: title
         type: string
@@ -26,6 +22,8 @@ models:
         items:
           type: string
         label: Tags
+    singleInstance: true
+    file: ''
   welcome_to_gatsby:
     type: page
     label: Welcome To Gatsby
