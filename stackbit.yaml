@@ -7,25 +7,31 @@ models:
   blog:
     type: page
     label: Blog
-    match: '**/*'
+    match:
+      - '**/*'
     exclude:
       - welcome-to-gatsby/index.md
     fields:
       - name: title
         type: string
+        label: Title
       - name: date
         type: date
+        label: Date
       - name: img
         type: image
+        label: Img
       - name: tags
         type: list
         items:
           type: string
+        label: Tags
   welcome_to_gatsby:
     type: page
     label: Welcome To Gatsby
     folder: welcome-to-gatsby
-    match: '*'
+    match:
+      - '*'
     fields:
       - type: string
         name: title
